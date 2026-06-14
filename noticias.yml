@@ -1,0 +1,75 @@
+name: Atualizar Notícias - Equipe Bauzinho
+
+on:
+  schedule:
+    # Executa todos os dias às 08:00 (horário de Brasília, UTC-3 => 11:00 UTC)
+    - cron: "0 11 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  atualizar-noticias:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar gerador de notícias
+        run: node scripts/gerarNoticias.js
+
+      - name: Commit e push das alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/noticias.json sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração nas notícias."
+          else
+            git commit -m "chore: atualização automática de notícias [skip ci]"
+            git push
+          fi
+
+  publicar-pages:
+    needs: atualizar-noticias
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload do conteúdo do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy para GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
