@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Notícia - Equipe Bauzinho Notícias</title>
+<meta name="description" id="pageDescription" content="Notícias sobre logística, fretes e e-commerce - Equipe Bauzinho Notícias">
+<meta name="robots" content="index, follow">
+<link rel="canonical" id="pageCanonical" href="https://equipebauzinho.github.io/noticia.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" id="ogTitle" content="Equipe Bauzinho Notícias">
+<meta property="og:description" id="ogDescription" content="">
+<meta property="og:image" id="ogImage" content="">
+<meta property="og:url" id="ogUrl" content="">
+<meta property="og:site_name" content="Equipe Bauzinho Notícias">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" id="twitterTitle" content="">
+<meta name="twitter:description" id="twitterDescription" content="">
+<meta name="twitter:image" id="twitterImage" content="">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json" id="jsonLd"></script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚚</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">🚚 Equipe <span>Bauzinho</span> Notícias</a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Início</a>
+      <a href="categoria.html?cat=Fretes">Fretes</a>
+      <a href="categoria.html?cat=Logística">Logística</a>
+      <a href="categoria.html?cat=Combustível">Combustível</a>
+      <a href="categoria.html?cat=Mercado Livre">Mercado Livre</a>
+      <a href="categoria.html?cat=Shopee">Shopee</a>
+      <a href="categoria.html?cat=Amazon">Amazon</a>
+      <a href="categoria.html?cat=Oportunidades">Oportunidades</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="darkModeToggle" class="icon-btn" title="Alternar modo escuro" aria-label="Alternar modo escuro">🌙</button>
+      <button id="menuToggle" class="icon-btn menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </div>
+
+  <div class="container search-bar">
+    <input type="text" id="searchInput" placeholder="Buscar notícias sobre frete, logística, Fiorino, Shopee...">
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</header>
+
+<main class="container">
+
+  <nav class="breadcrumb" id="breadcrumb" aria-label="breadcrumb"></nav>
+
+  <article class="article-page" id="articleContent">
+    <div class="skeleton-card" style="height:400px;"></div>
+  </article>
+
+  <section class="share-section">
+    <h3>Compartilhar esta notícia</h3>
+    <div class="share-buttons">
+      <a id="whatsappShare" class="share-btn whatsapp" target="_blank" rel="noopener">📲 WhatsApp</a>
+      <button id="copyLink" class="share-btn copy">🔗 Copiar Link</button>
+    </div>
+  </section>
+
+  <section class="related-section">
+    <h2 class="section-title">Notícias Relacionadas</h2>
+    <div class="news-grid" id="relatedGrid"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h4>Equipe Bauzinho Notícias</h4>
+      <p>Portal automático de notícias sobre fretes, logística, e-commerce e mercado de transporte no Brasil.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="categoria.html?cat=Fretes">Fretes</a></li>
+        <li><a href="categoria.html?cat=Logística">Logística</a></li>
+        <li><a href="categoria.html?cat=Combustível">Combustível</a></li>
+        <li><a href="categoria.html?cat=Mercado Livre">Mercado Livre</a></li>
+        <li><a href="categoria.html?cat=Shopee">Shopee</a></li>
+        <li><a href="categoria.html?cat=Amazon">Amazon</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre</h4>
+      <p>As notícias deste portal são agregadas automaticamente a partir de fontes públicas (Google News) e atualizadas diariamente.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="anoAtual"></span> Equipe Bauzinho Notícias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "equipe-bauzinho-noticias",
+  "version": "1.0.0",
+  "description": "Portal automático de notícias sobre fretes, logística, e-commerce e transporte de cargas - Equipe Bauzinho Notícias",
+  "private": true,
+  "main": "scripts/gerarNoticias.js",
+  "scripts": {
+    "gerar-noticias": "node scripts/gerarNoticias.js"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

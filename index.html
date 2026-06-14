@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipe Bauzinho Notícias - Logística, Fretes, Fiorino, Mercado Livre, Shopee, Amazon</title>
+<meta name="description" content="Portal de notícias sobre Fiorino, Fretes, Logística, Mercado Livre, Shopee, Amazon, Transportadoras, Agregados, Motorista Autônomo, Diesel, Pedágio e ANTT. Atualizado diariamente.">
+<meta name="keywords" content="Fiorino, Fretes, Logística, Mercado Livre, Shopee, Amazon, Transportadoras, Agregados, Motorista Autônomo, Diesel, Pedágio, ANTT, notícias">
+<meta name="author" content="Equipe Bauzinho Notícias">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://equipebauzinho.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Equipe Bauzinho Notícias">
+<meta property="og:description" content="Portal de notícias sobre Fiorino, Fretes, Logística, Mercado Livre, Shopee, Amazon, Transportadoras, Agregados, Motorista Autônomo, Diesel, Pedágio e ANTT.">
+<meta property="og:image" content="https://equipebauzinho.github.io/assets/img/og-image.jpg">
+<meta property="og:url" content="https://equipebauzinho.github.io/">
+<meta property="og:site_name" content="Equipe Bauzinho Notícias">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Equipe Bauzinho Notícias">
+<meta name="twitter:description" content="Notícias sobre Fretes, Logística, Fiorino, Mercado Livre, Shopee, Amazon, ANTT e mais.">
+<meta name="twitter:image" content="https://equipebauzinho.github.io/assets/img/og-image.jpg">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "Equipe Bauzinho Notícias",
+  "url": "https://equipebauzinho.github.io/",
+  "logo": "https://equipebauzinho.github.io/assets/img/logo.png",
+  "description": "Portal de notícias sobre logística, fretes, transportadoras e mercado de e-commerce no Brasil."
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚚</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">🚚 Equipe <span>Bauzinho</span> Notícias</a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Início</a>
+      <a href="categoria.html?cat=Fretes">Fretes</a>
+      <a href="categoria.html?cat=Logística">Logística</a>
+      <a href="categoria.html?cat=Combustível">Combustível</a>
+      <a href="categoria.html?cat=Mercado Livre">Mercado Livre</a>
+      <a href="categoria.html?cat=Shopee">Shopee</a>
+      <a href="categoria.html?cat=Amazon">Amazon</a>
+      <a href="categoria.html?cat=Oportunidades">Oportunidades</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="darkModeToggle" class="icon-btn" title="Alternar modo escuro" aria-label="Alternar modo escuro">🌙</button>
+      <button id="menuToggle" class="icon-btn menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </div>
+
+  <div class="container search-bar">
+    <input type="text" id="searchInput" placeholder="Buscar notícias sobre frete, logística, Fiorino, Shopee...">
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero" id="hero">
+    <div class="hero-skeleton">Carregando destaque...</div>
+  </section>
+
+  <div class="content-grid">
+
+    <section class="news-section">
+      <h2 class="section-title">Últimas Notícias</h2>
+      <div class="news-grid" id="newsGrid">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="widget">
+        <h3 class="widget-title">🔥 Mais Lidas</h3>
+        <ul id="maisLidas" class="ranked-list"></ul>
+      </div>
+
+      <div class="widget">
+        <h3 class="widget-title">📂 Categorias</h3>
+        <ul id="categoriasList" class="tag-list"></ul>
+      </div>
+
+      <div class="widget ad-widget">
+        <!-- Espaço reservado para Google AdSense -->
+        <div class="ad-placeholder">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-0000000000000000"
+               data-ad-slot="0000000000"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <p class="ad-label">Publicidade</p>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h4>Equipe Bauzinho Notícias</h4>
+      <p>Portal automático de notícias sobre fretes, logística, e-commerce e mercado de transporte no Brasil.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="categoria.html?cat=Fretes">Fretes</a></li>
+        <li><a href="categoria.html?cat=Logística">Logística</a></li>
+        <li><a href="categoria.html?cat=Combustível">Combustível</a></li>
+        <li><a href="categoria.html?cat=Mercado Livre">Mercado Livre</a></li>
+        <li><a href="categoria.html?cat=Shopee">Shopee</a></li>
+        <li><a href="categoria.html?cat=Amazon">Amazon</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre</h4>
+      <p>As notícias deste portal são agregadas automaticamente a partir de fontes públicas (Google News) e atualizadas diariamente.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="anoAtual"></span> Equipe Bauzinho Notícias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
